@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#7dbfc1" />
+    <meta name="description" content="A quiet little pool for tropical blossoms. Pick a flower, let it float, and play with the water." />
+    <title>Blossoms afloat.</title>
+    <link rel="icon" type="image/png" href="https://files.manuscdn.com/user_upload_by_module/session_file/310519664020210484/aoAfxdbMULCONlnr.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="pool" id="pool" aria-label="Blossoms afloat interactive pool">
+      <canvas class="water" id="water" aria-hidden="true"></canvas>
+      <div class="water-sheen" aria-hidden="true"></div>
+      <div class="ripples" id="ripples" aria-hidden="true"></div>
+      <div class="blossoms" id="blossoms" aria-label="Floating flowers"></div>
+      <div class="droplets" id="droplets" aria-hidden="true"></div>
+
+      <header class="wordmark" aria-label="Blossoms afloat">
+        <h1>Blossoms<br /><em>afloat.</em></h1>
+        <span class="wordmark-seed" aria-hidden="true">✳</span>
+      </header>
+
+      <section class="picker glass" aria-label="Choose a flower">
+        <div class="flower-options" role="group" aria-label="Flower varieties">
+          <button class="flower-choice is-selected" type="button" data-flower="pink" aria-pressed="true" aria-label="Pink hibiscus">
+            <span class="choice-icon"><img src="/manus-storage/pink_fc5fffe6.png" data-fallback="/flowers/pink.png" alt="" /></span><span>Pink hibiscus</span>
+          </button>
+          <button class="flower-choice" type="button" data-flower="magenta" aria-pressed="false" aria-label="Bright hibiscus">
+            <span class="choice-icon"><img src="/manus-storage/magenta_ee46a899.png" data-fallback="/flowers/magenta.png" alt="" /></span><span>Bright hibiscus</span>
+          </button>
+          <button class="flower-choice" type="button" data-flower="lily" aria-pressed="false" aria-label="White lily">
+            <span class="choice-icon"><img src="/manus-storage/lily_2707a1a6.png" data-fallback="/flowers/lily.png" alt="" /></span><span>White lily</span>
+          </button>
+          <button class="flower-choice" type="button" data-flower="plumeria" aria-pressed="false" aria-label="Plumeria">
+            <span class="choice-icon"><img src="/manus-storage/plumeria_79152eec.png" data-fallback="/flowers/plumeria.png" alt="" /></span><span>Plumeria</span>
+          </button>
+        </div>
+        <div class="picker-divider"></div>
+        <button class="clear-button" id="clear" type="button">Clear the water</button>
+      </section>
+
+      <div class="hint" id="hint" role="status" aria-live="polite">Pick a flower to drop it in the pool</div>
+      <div class="screen-reader" id="announcer" aria-live="polite"></div>
+      <button class="keyboard-pool" id="keyboard-pool" type="button" aria-label="Drop the selected flower in the center of the pool">Drop selected flower in the pool</button>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
